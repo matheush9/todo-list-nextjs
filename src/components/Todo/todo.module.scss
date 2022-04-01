@@ -1,9 +1,11 @@
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 1vw;
+  padding: 3vw;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 
   .h1 {
     text-align: center;
@@ -30,12 +32,12 @@
     border-radius: 5px;
     outline: none;
     width: 30vw;
-  
+
     &:focus {
       border: solid 2px black;
     }
   }
-  
+
   .tarefa {
     padding: 1vh;
     margin: 2vw;
@@ -44,7 +46,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: solid rgb(87, 177, 177) 1px;
-  
+
     .checkbox {
       margin-right: 1vw;
       cursor: pointer;
@@ -54,29 +56,28 @@
       background-color: rgb(208, 235, 235);
     }
   }
-  
+
   .listaTarefas {
     width: 60vw;
     margin-top: 5vh;
     background-color: white;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  
+
     li {
       list-style: none;
     }
   }
-  
+
   .updateTarefa {
-    input { 
+    input {
       padding: 1vh;
       outline: none;
       border: solid 1px black;
       border-radius: 5px;
-  
     }
   }
-  
+
   .totalTarefas {
     display: flex;
     justify-content: center;
@@ -85,3 +86,24 @@
   }
 }
 
+// MOBILE
+
+@media (max-width: 600px) {
+  .app {
+    padding: 6vw;
+
+    .pesquisa {
+      width: 55vw;
+    }
+
+    .listaTarefas {
+      width: 85vw;
+    }
+
+    .updateTarefa {
+      input {
+        width: 30vw;
+      }
+    }
+  }
+}
